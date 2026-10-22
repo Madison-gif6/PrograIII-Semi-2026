@@ -13,5 +13,5 @@ class MyHandler(SimpleHTTPRequestHandler):
         return SimpleHTTPRequestHandler.do_GET(self)
 
 print(f"Servidor corriendo en el puerto {port}")
-server = HTTPServer(("localhost",port),MiServidor)
-server.serve_forever())
+server = HTTPServer(("localhost",port),MyHandler)
+server.serve_forever()
